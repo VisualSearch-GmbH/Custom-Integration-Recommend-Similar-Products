@@ -32,7 +32,7 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
 ```
 As you can see here, we need product IDs, names, categories and image urls.
 
-To send this request, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
+To send this request, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop. The computation of related products vary according to the size of the catalogue. For 1.000 products it should take about 5 minutes.
 
 If the request is accepted, then you should receive this message:
 
@@ -85,7 +85,7 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
 ```
 Wie Sie hier sehen können, benötigen wir Produkt-IDs, Namen, Kategorien und Bild-URLs.
 
-Um diese Anfrage zu senden, benötigen Sie einen gültigen API-Schlüssel. Kontaktieren Sie bitte office@visualsearch.at, um Ihren API-Schlüssel zu erhalten. Der Systemschlüssel ist eine optionale Variable, die für den Zugriff auf den Webshop verwendet wird.
+Um diese Anfrage zu senden, benötigen Sie einen gültigen API-Schlüssel. Kontaktieren Sie bitte office@visualsearch.at, um Ihren API-Schlüssel zu erhalten. Der Systemschlüssel ist eine optionale Variable, die für den Zugriff auf den Webshop verwendet wird. Die Berechnung der ähnlichen Produkte variiert je nach Größe des Katalogs. Für 1.000 Produkte sollte es etwa 5 Minuten dauern.
 
 Wenn die Anfrage akzeptiert wird, sollten Sie diese Meldung erhalten:
 
@@ -119,7 +119,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ### 1. Výpočet podobných produktov pomocou katalógu webového obchodu
 
-Ak chcete vypočítať súvisiace produkty pomocou nášho rozhrania API, musíte odoslať nasledujúcu požiadavku:
+Ak chcete vypočítať podobné produkty pomocou nášho rozhrania API, musíte odoslať nasledujúcu požiadavku:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
@@ -138,7 +138,7 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
 ```
 Ako vidíte, potrebujeme ID produktov, názvy, kategórie a URL adresy obrázkov.
 
-Na odoslanie tejto požiadavky potrebujete platný kľúč API. Kontaktujte prosím office@visualsearch.at a získajte svoj kľúč API. Systémový kľúč je nepovinná premenná, ktorá sa používa na prístup k webovému obchodu.
+Na odoslanie tejto požiadavky potrebujete platný kľúč API. Kontaktujte prosím office@visualsearch.at a získajte svoj kľúč API. Systémový kľúč je nepovinná premenná, ktorá sa používa na prístup k webovému obchodu. Výpočet podobných produktov sa líši podľa veľkosti katalógu. V prípade 1 000 produktov by to malo trvať približne 5 minút.
 
 Ak je žiadosť prijatá, mala by sa zobraziť táto správa:
 
