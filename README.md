@@ -128,7 +128,7 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
 ```
 Ako mozete vidiet tu, potrebujeme ID produktov, ich mena, kategorie a url obrazkov.
 
-Na zaslanie tohto requestu je potrebny platny API kluc. Kontaktujte prosim office@visualsearch.at na obrzanie platneho API kluca. Systemovy kluc je potrebny len v pripade, ze webshop si ho vyzaduje.
+Na zaslanie tohto requestu je potrebny platny API kluc. Kontaktujte prosim office@visualsearch.at na obrzanie platneho API kluca. Systemovy kluc je potrebny len v pripade, ze si ho webshop vyzaduje.
 
 V pripade uspechu by sme mali obdrzat tuto spravu:
 
