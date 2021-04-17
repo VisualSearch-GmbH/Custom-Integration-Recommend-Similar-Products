@@ -147,7 +147,7 @@ Vypocitane podobne produkty pouzijeme na updatovanie webshopu. Na tento ucel pot
 Na tomto priklade je uvedene ako sa da pomocou endpointu webshopu aktualizovat produkt s ID = 8e56cc01ee064d7dbaf7a4356895da9f:
 
 ```bash
-curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
+curl --location --request POST 'https://VAS_WEBSHOP.com/api/update_cross_selling' \
 --header 'Vis-SYSTEM-KEY: SYSTEM_KEY' \
 --header 'Content-Type: application/json' \
 --data-raw '{
