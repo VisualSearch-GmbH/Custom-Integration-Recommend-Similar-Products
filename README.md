@@ -48,12 +48,12 @@ If the request is not accepted, then you should receive a message with code 500.
 
 #### Alternative #1 Update using Json file
 
-To use the computed related products, you can download the results from a provided link in Json format. Here is an example:
+To use the computed related products, you can download the results from a provided url link e.g. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Here is an example of the content of a Json result file, where product with ID = 11dc680240b04f469ccba354cbf0b967 has these 2 related products:
 
 ```bash
 {
   "products": 
-    {"11dc680240b04f469ccba354cbf0b967": ["11dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"], "2a88d9b59d474c7e869d8071649be43c": ["11dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
+    {"11dc680240b04f469ccba354cbf0b967": ["05dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
 }
 ```
 
@@ -61,7 +61,7 @@ To use the computed related products, you can download the results from a provid
 
 To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products. We will use the previously provided System key.
 
-An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f using this endpoint is presented here:
+An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f with 10 related products using this endpoint is presented here:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
