@@ -153,7 +153,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ### 1. Výpočet podobných produktov pomocou katalógu webového obchodu
 
-Ak chcete vypočítať podobné produkty pomocou nášho rozhrania API, musíte odoslať nasledujúcu požiadavku:
+Ak chcete vypočítať podobné produkty pomocou nášho API rozhrania, musíte odoslať nasledujúcu požiadavku:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
@@ -170,9 +170,9 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
   ]
 }'
 ```
-Ako vidíte, potrebujeme ID produktov, názvy, kategórie a URL adresy obrázkov.
+Ako vidíte, potrebujeme produktové ID, názvy, kategórie a URL adresy obrázkov.
 
-Na odoslanie tejto požiadavky potrebujete platný kľúč API. Kontaktujte prosím office@visualsearch.at a získajte svoj kľúč API. Systémový kľúč je nepovinná premenná, ktorá sa používa na prístup k webovému obchodu. Výpočet podobných produktov sa líši podľa veľkosti katalógu. V prípade 1 000 produktov by to malo trvať približne 5 minút.
+Na odoslanie tejto požiadavky potrebujete platný API kľúč. Kontaktujte prosím office@visualsearch.at a získajte svoj kľúč API. Systémový kľúč je nepovinná premenná, ktorá sa používa na prístup k webovému obchodu. Výpočet podobných produktov sa líši podľa veľkosti katalógu. V prípade 1 000 produktov by to malo trvať približne 5 minút.
 
 Ak je žiadosť prijatá, mala by sa zobraziť táto správa:
 
@@ -184,14 +184,31 @@ Ak je žiadosť prijatá, mala by sa zobraziť táto správa:
 ```
 Ak žiadosť nebude prijatá, mala by sa zobraziť správa s kódom 500.
 
-### 2. Aktualizovanie podobnych produktov vo webshope
+### 2. Aktualizácia podobných produktov v internetovom obchode
 
-Vypocitane podobne produkty pouzijeme na updatovanie webshopu. Na tento ucel potrebujeme aby webshop disponoval endpointom, ktory dokaze aktualizovat podobne produkty. Pouzijeme tento endpoint a pomocou neho aktualizujeme podobne produkty.
+#### Alternatíva 1. Aktualizácia pomocou súboru Json
 
-Na tomto priklade je uvedene ako sa da pomocou endpointu webshopu aktualizovat produkt s ID = 8e56cc01ee064d7dbaf7a4356895da9f:
+Po odoslaní žiadosti o výpočet počkajte podľa veľkosti vášho katalógu. Pre 1 000 produktov približne 5 minút, pre 10 000 produktov približne 1 hodinu atď. 
+
+Ak chcete používať najnovšie vypočítané súvisiace produkty, môžete si výsledky stiahnuť z poskytnutého url odkazu, napr. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Tu je príklad obsahu súboru s výsledkami Json, kde výrobok s ID = 11dc680240b04f469ccba354cbf0b967 má tieto 2 súvisiace výrobky:
 
 ```bash
-curl --location --request POST 'https://VAS_WEBSHOP.com/api/update_cross_selling' \
+{
+  "products": 
+    {"11dc680240b04f469ccba354cbf0b967": ["05dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
+}
+```
+
+#### Alternatíva 2. Aktualizácia pomocou webového obchodu API
+
+Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše rozhranie API automaticky nahrá výsledky do vášho internetového obchodu. 
+
+Ak chcete používať vypočítané súvisiace produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme súvisiace produkty. Použijeme predtým zadaný systémový kľúč.
+
+Tu je uvedený príklad aktualizácie produktu s ID = 8e56cc01ee064d7dbaf7a4356895da9f s 10 podobnými produktmi pomocou tohto koncového bodu:
+
+```bash
+curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
 --header 'Vis-SYSTEM-KEY: SYSTEM_KEY' \
 --header 'Content-Type: application/json' \
 --data-raw '{
