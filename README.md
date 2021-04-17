@@ -46,7 +46,20 @@ If the request is not accepted, then you should receive a message with code 500.
 
 ### 2. Update related products in the webshop
 
-To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products.
+#### Alternative #1 Update using Json file
+
+To use the computed related products, you can download the results from a provided link in Json format. Here is an example:
+
+```bash
+{
+  "products": 
+    {"11dc680240b04f469ccba354cbf0b967": ["11dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"], "2a88d9b59d474c7e869d8071649be43c": ["11dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
+}
+```
+
+#### Alternative #2 Update using webshop API
+
+To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products. We will use the previously provided System key.
 
 An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f using this endpoint is presented here:
 
