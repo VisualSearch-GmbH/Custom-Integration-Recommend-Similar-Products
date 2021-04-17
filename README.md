@@ -12,6 +12,7 @@ curl --location --request POST 'https://shopware.visualsearch.at/store-api/v3/vi
 --header 'sw-access-key: TEST_KEY' \
 --data-raw ''
 ```
+As you can see here, we need product IDs, names, image urls and categories.
 
 To use this command, you need a valid API key. Contact please office@visualsearch.at to obtain your API key.
 
