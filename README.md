@@ -63,7 +63,7 @@ To use the latest computed related products, you can download the results from a
 
 If you choose this alternative, then you do not need to wait for the results. Our API will automatically upload results to your webshop. 
 
-To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products. We will use the previously provided System key.
+To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products. In case it is needed, we will use the previously provided System key.
 
 An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f with 10 related products using this endpoint is presented here:
 
@@ -133,7 +133,7 @@ Um die neuesten berechneten verwandten Produkte zu verwenden, können Sie die Er
 
 Wenn Sie sich für diese Alternative entscheiden, dann müssen Sie nicht auf die Ergebnisse warten. Unsere API wird die Ergebnisse automatisch in Ihren Webshop hochladen. 
 
-Um die berechneten verwandten Produkte zu verwenden, muss der Webshop einen Endpoint erstellen, der diese akzeptieren kann. Über diesen Endpoint aktualisieren wir die verwandten Produkte. Wir werden den zuvor bereitgestellten Systemschlüssel verwenden.
+Um die berechneten verwandten Produkte zu verwenden, muss der Webshop einen Endpoint erstellen, der diese akzeptieren kann. Über diesen Endpoint aktualisieren wir die verwandten Produkte. Falls er benötigt wird, verwenden wir den zuvor angegebenen Systemschlüssel.
 
 Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 8e56cc01ee064d7dbaf7a4356895da9f mit 10 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
 
@@ -203,7 +203,7 @@ Ak chcete používať najnovšie vypočítané súvisiace produkty, môžete si 
 
 Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše rozhranie API automaticky nahrá výsledky do vášho internetového obchodu. 
 
-Ak chcete používať vypočítané súvisiace produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme súvisiace produkty. Použijeme predtým zadaný systémový kľúč.
+Ak chcete používať vypočítané súvisiace produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme súvisiace produkty. V prípade potreby použijeme predtým zadaný systémový kľúč.
 
 Tu je uvedený príklad aktualizácie produktu s ID = 8e56cc01ee064d7dbaf7a4356895da9f s 10 podobnými produktmi pomocou tohto koncového bodu:
 
