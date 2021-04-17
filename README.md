@@ -11,9 +11,9 @@ Instructions for custom shop systems on how to use similar products recommendati
 
 ## English
 
-### 1. Compute related products using webshop products
+### 1. Compute related products using webshop's catalogue
 
-To compute related products using our API you need to invoke this command:
+To compute related products using our API you need to send the following request:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
@@ -32,13 +32,13 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
 ```
 As you can see here, we need product IDs, names, categories and image urls.
 
-To use this command, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
+To send this request, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
 
-### 2. Update existing related products in the webshop
+### 2. Update related products in the webshop
 
 To use the computed related products, the webshop needs to create and endpoint, which can accept them. Using this endpoint, we update the related products.
 
-An example of using this endpoint is presented here:
+An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f using this endpoint is presented here:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
@@ -56,7 +56,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ### 1. Compute related products using webshop products
 
-To compute related products using our API you need to invoke this command:
+To compute related products using our API you need to send the following request:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
@@ -75,13 +75,13 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
 ```
 As you can see here, we need product IDs, names, categories and image urls.
 
-To use this command, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
+To send this request, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
 
 ### 2. Update existing related products in the webshop
 
 To use the computed related products, the webshop needs to create and endpoint, which can accept them. Using this endpoint, we update the related products.
 
-An example of using this endpoint is presented here:
+An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f using this endpoint is presented here:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
@@ -97,9 +97,9 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ## Slovak
 
-### 1. Compute related products using webshop products
+### 1. Vypocitaj podobne produkty z katalogu webshopu
 
-To compute related products using our API you need to invoke this command:
+Na vypocitanie podobnych produktov pomocou naseho API potrebujete poslat tento request:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
@@ -116,9 +116,9 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
   ]
 }'
 ```
-As you can see here, we need product IDs, names, categories and image urls.
+Ako mozete vidiet tu, potrebujeme ID produktov, ich mena, kategorie a url obrazkov.
 
-To use this command, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
+Na zaslanie tohto requestu je potrebna platny API kluc. Kontaktujte prosim office@visualsearch.at na obrzanie platneho API kluca. Systemovy kluc je potrebny len v pripade, ze webshop si ho vyzaduje.
 
 ### 2. Update existing related products in the webshop
 
