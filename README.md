@@ -64,9 +64,9 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ## German
 
-### 1. Compute related products using webshop products
+### 1. Ähnliche Produkte aus dem Katalog des Webshops berechnen
 
-To compute related products using our API you need to send the following request:
+Um ähnliche Produkte mit unserer API zu berechnen, müssen Sie die folgende Anfrage senden:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
@@ -83,13 +83,23 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
   ]
 }'
 ```
-As you can see here, we need product IDs, names, categories and image urls.
+Wie Sie hier sehen können, benötigen wir Produkt-IDs, Namen, Kategorien und Bild-URLs.
 
-To send this request, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
+Um diese Anfrage zu senden, benötigen Sie einen gültigen API-Schlüssel. Kontaktieren Sie bitte office@visualsearch.at, um Ihren API-Schlüssel zu erhalten. Der Systemschlüssel ist eine optionale Variable, die für den Zugriff auf den Webshop verwendet wird.
 
-### 2. Update existing related products in the webshop
+Wenn die Anfrage akzeptiert wird, sollten Sie diese Meldung erhalten:
 
-To use the computed related products, the webshop needs to create and endpoint, which can accept them. Using this endpoint, we update the related products.
+```bash
+{
+    "code": 200,
+    "message": "API processing started key API_TEST_KEY"
+}
+```
+Wenn die Anfrage nicht akzeptiert wird, sollten Sie eine Meldung mit Code 500 erhalten.
+
+### 2. Update related products in the webshop
+
+To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products.
 
 An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f using this endpoint is presented here:
 
@@ -107,9 +117,9 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ## Slovak
 
-### 1. Vypocitaj podobne produkty z katalogu webshopu
+### 1. Výpočet podobných produktov pomocou katalógu webového obchodu
 
-Na vypocitanie podobnych produktov pomocou naseho API nam potrebujete poslat tento request:
+Ak chcete vypočítať súvisiace produkty pomocou nášho rozhrania API, musíte odoslať nasledujúcu požiadavku:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
@@ -126,11 +136,11 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
   ]
 }'
 ```
-Ako mozete vidiet tu, potrebujeme ID produktov, ich mena, kategorie a url obrazkov.
+Ako vidíte, potrebujeme ID produktov, názvy, kategórie a URL adresy obrázkov.
 
-Na zaslanie tohto requestu je potrebny platny API kluc. Kontaktujte prosim office@visualsearch.at na obrzanie platneho API kluca. Systemovy kluc je potrebny len v pripade, ze si ho webshop vyzaduje.
+Na odoslanie tejto požiadavky potrebujete platný kľúč API. Kontaktujte prosím office@visualsearch.at a získajte svoj kľúč API. Systémový kľúč je nepovinná premenná, ktorá sa používa na prístup k webovému obchodu.
 
-V pripade uspechu by sme mali obdrzat tuto spravu:
+Ak je žiadosť prijatá, mala by sa zobraziť táto správa:
 
 ```bash
 {
@@ -138,7 +148,7 @@ V pripade uspechu by sme mali obdrzat tuto spravu:
     "message": "API processing started key API_TEST_KEY"
 }
 ```
-V pripade neuspechu by sme mali obdrzat spravu s kodom 500.
+Ak žiadosť nebude prijatá, mala by sa zobraziť správa s kódom 500.
 
 ### 2. Aktualizovanie podobnych produktov vo webshope
 
