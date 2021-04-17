@@ -5,9 +5,9 @@ Instructions for custom shop systems on how to use our similar product recommend
 
 [English](README.md#English)
 
-[German](README.md#German)
+[Deutsch](README.md#Deutsch)
 
-[Slovak](README.md#Slovak)
+[Slovensky](README.md#Slovensky)
 
 ## English
 
@@ -62,7 +62,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 }'
 ```
 
-## German
+## Deutsch
 
 ### 1. Ähnliche Produkte aus dem Katalog des Webshops berechnen
 
@@ -115,7 +115,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 }'
 ```
 
-## Slovak
+## Slovensky
 
 ### 1. Výpočet podobných produktov pomocou katalógu webového obchodu
 
