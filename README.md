@@ -48,7 +48,9 @@ If the request is not accepted, then you should receive a message with code 500.
 
 #### Alternative #1 Update using Json file
 
-To use the computed related products, you can download the results from a provided url link e.g. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Here is an example of the content of a Json result file, where product with ID = 11dc680240b04f469ccba354cbf0b967 has these 2 related products:
+After you send the computation request, please wait according to the size of your catalogue. For 1.000 products about 5 min, for 10.000 products about 1 hour, etc. 
+
+To use the latest computed related products, you can download the results from a provided url link e.g. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Here is an example of the content of a Json result file, where product with ID = 11dc680240b04f469ccba354cbf0b967 has these 2 related products:
 
 ```bash
 {
@@ -58,6 +60,8 @@ To use the computed related products, you can download the results from a provid
 ```
 
 #### Alternative #2 Update using webshop API
+
+If you choose this alternative, then you do not need to wait for the results. Our API will automatically upload results to your webshop. 
 
 To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products. We will use the previously provided System key.
 
