@@ -1,7 +1,10 @@
 # Custom Integration - Recommend Similar Products
 Instructions for custom shop systems on how to use similar products recommendations API
 
-[linky](README.md#English)
+## Languages
+[English](README.md#English)
+[German](README.md#German)
+[Slovak/Czech](README.md#Slovak/Czech)
 
 ## English
 
@@ -49,7 +52,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 ## German
 
 
-## Slovak / Czech
+## Slovak/Czech
 
 ### Contact
 E-Mail: office@visualsearch.at, Web: www.visualsearch.at, Mobile: +43 670 6017118
