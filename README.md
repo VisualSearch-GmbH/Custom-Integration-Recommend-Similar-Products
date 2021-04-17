@@ -46,7 +46,7 @@ If the request is not accepted, then you should receive a message with code 500.
 
 ### 2. Update related products in the webshop
 
-To use the computed related products, the webshop needs to create and endpoint, which can accept them. Using this endpoint, we update the related products.
+To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products.
 
 An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f using this endpoint is presented here:
 
