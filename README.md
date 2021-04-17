@@ -142,7 +142,7 @@ V pripade neuspechu by sme mali obdrzat spravu s kodom 500.
 
 ### 2. Aktualizovanie podobnych produktov vo webshope
 
-Vypocitane podobne produkty pouzijeme na updatovanie webshopu. Na tento ucel potrebujeme aby webshop disponoval endpointom, ktory dokaze aktualizovat vypocitane podobne produkty. Pouzijeme tento endpoint a pomocou neho aktualizujeme podobne produkty.
+Vypocitane podobne produkty pouzijeme na updatovanie webshopu. Na tento ucel potrebujeme aby webshop disponoval endpointom, ktory dokaze aktualizovat podobne produkty. Pouzijeme tento endpoint a pomocou neho aktualizujeme podobne produkty.
 
 Na tomto priklade je uvedene ako sa da pomocou endpointu webshopu aktualizovat produkt s ID = 8e56cc01ee064d7dbaf7a4356895da9f:
 
