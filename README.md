@@ -114,11 +114,28 @@ Wenn die Anfrage akzeptiert wird, sollten Sie diese Meldung erhalten:
 ```
 Wenn die Anfrage nicht akzeptiert wird, sollten Sie eine Meldung mit Code 500 erhalten.
 
-### 2. Update related products in the webshop
+### 2. Ähnliche Produkte im Webshop aktualisieren
 
-To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products.
+#### Alternative #1 Update mit Hilfe einer Json-Datei
 
-An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f using this endpoint is presented here:
+Nachdem Sie die Berechnungsanfrage gesendet haben, warten Sie bitte entsprechend der Größe Ihres Katalogs. Für 1.000 Produkte ca. 5 min, für 10.000 Produkte ca. 1 Stunde, usw. 
+
+Um die neuesten berechneten verwandten Produkte zu verwenden, können Sie die Ergebnisse von einem bereitgestellten URL-Link herunterladen, z. B. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Hier ist ein Beispiel des Inhalts einer Json-Ergebnisdatei, in der das Produkt mit der ID = 11dc680240b04f469ccba354cbf0b967 diese 2 ähnlichen Produkte hat:
+
+```bash
+{
+  "products": 
+    {"11dc680240b04f469ccba354cbf0b967": ["05dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
+}
+```
+
+#### Alternative #2 Update über Webshop-API
+
+Wenn Sie sich für diese Alternative entscheiden, dann müssen Sie nicht auf die Ergebnisse warten. Unsere API wird die Ergebnisse automatisch in Ihren Webshop hochladen. 
+
+Um die berechneten verwandten Produkte zu verwenden, muss der Webshop einen Endpoint erstellen, der diese akzeptieren kann. Über diesen Endpoint aktualisieren wir die verwandten Produkte. Wir werden den zuvor bereitgestellten Systemschlüssel verwenden.
+
+Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 8e56cc01ee064d7dbaf7a4356895da9f mit 10 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
