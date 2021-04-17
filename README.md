@@ -34,6 +34,16 @@ As you can see here, we need product IDs, names, categories and image urls.
 
 To send this request, you need a valid API key. Contact please office@visualsearch.at to obtain your API key. System key is an optional variable, which is used to access the webshop.
 
+If the request is accepted, then you should receive this message:
+
+```bash
+{
+    "code": 200,
+    "message": "API processing started key API_TEST_KEY"
+}
+```
+If the request is not accepted, then you should receive a message with code 500.
+
 ### 2. Update related products in the webshop
 
 To use the computed related products, the webshop needs to create and endpoint, which can accept them. Using this endpoint, we update the related products.
@@ -120,11 +130,21 @@ Ako mozete vidiet tu, potrebujeme ID produktov, ich mena, kategorie a url obrazk
 
 Na zaslanie tohto requestu je potrebny platny API kluc. Kontaktujte prosim office@visualsearch.at na obrzanie platneho API kluca. Systemovy kluc je potrebny len v pripade, ze webshop si ho vyzaduje.
 
-### 2. Update existing related products in the webshop
+V pripade uspechu by sme mali obdrzat tuto spravu:
 
-To use the computed related products, the webshop needs to create and endpoint, which can accept them. Using this endpoint, we update the related products.
+```bash
+{
+    "code": 200,
+    "message": "API processing started key API_TEST_KEY"
+}
+```
+V pripade neuspechu by sme mali obdrzat spravu s kodom 500.
 
-An example of using this endpoint is presented here:
+### 2. Updatovanie podobnych produktov vo webshope
+
+Vypocitane podobne produkty pouzijeme na updatovanie webshopu. Na tento ucel potrebujeme aby webshop disponoval endpointom, ktory dokaze akceptovat vypocitane podobne produkty. Pouzijeme tento endpoint a pomocou neho updatujeme podobne produkty.
+
+Na tomto priklade je uvedene ako sa da pomocou endpointu webshopu updatovat produkt s ID = 8e56cc01ee064d7dbaf7a4356895da9f:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
