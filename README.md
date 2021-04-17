@@ -3,4 +3,4 @@ Instructions for custom shop systems on how to use similar products recommendati
 
 ## English
 ## German
-## Slovak
+## Slovak / Czech
