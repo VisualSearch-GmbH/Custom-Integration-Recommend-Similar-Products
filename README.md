@@ -109,7 +109,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ### 1. Vypocitaj podobne produkty z katalogu webshopu
 
-Na vypocitanie podobnych produktov pomocou naseho API potrebujete poslat tento request:
+Na vypocitanie podobnych produktov pomocou naseho API nam potrebujete poslat tento request:
 
 ```bash
 curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
