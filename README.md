@@ -3,7 +3,9 @@ Instructions for custom shop systems on how to use similar products recommendati
 
 ## English
 
-
+```bash
+curl --location --request POST 'https://shopware.visualsearch.at/store-api/v3/vis/status_cross' --header 'sw-access-key: TEST_KEY' --data-raw ''
+```
 
 ## German
 
