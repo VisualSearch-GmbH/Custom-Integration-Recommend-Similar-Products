@@ -7,7 +7,7 @@ Instructions for custom shop systems on how to use similar products recommendati
 
 [German](README.md#German)
 
-[Slovak/Czech](README.md#Slovak/Czech)
+[Slovak/Czech](README.md#Slovak)
 
 ## English
 
@@ -55,7 +55,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 ## German
 
 
-## Slovak/Czech
+## Slovak
 
 ### Contact
 E-Mail: office@visualsearch.at, Web: www.visualsearch.at, Mobile: +43 670 6017118
