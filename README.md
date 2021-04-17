@@ -1,4 +1,4 @@
-# Custom Integration - Recommend-Similar-Products
+# Custom Integration - Recommend Similar Products
 Instructions for custom shop systems on how to use similar products recommendations API
 
 ## English
