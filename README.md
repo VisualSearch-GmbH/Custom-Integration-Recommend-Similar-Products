@@ -7,7 +7,7 @@ Instructions for custom shop systems on how to use similar products recommendati
 
 [German](README.md#German)
 
-[Slovak/Czech](README.md#Slovak)
+[Slovak](README.md#Slovak)
 
 ## English
 
