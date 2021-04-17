@@ -2,8 +2,11 @@
 Instructions for custom shop systems on how to use similar products recommendations API
 
 ## Languages
+
 [English](README.md#English)
+
 [German](README.md#German)
+
 [Slovak/Czech](README.md#Slovak/Czech)
 
 ## English
