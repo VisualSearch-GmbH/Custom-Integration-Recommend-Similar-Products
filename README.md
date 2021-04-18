@@ -170,7 +170,7 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
   ]
 }'
 ```
-Ako vidíte, potrebujeme produktové ID, názvy, kategórie a URL adresy obrázkov.
+Ako vidíte, potrebujeme produktové: ID, názvy, kategórie a URL adresy obrázkov.
 
 Na odoslanie tejto požiadavky potrebujete platný API kľúč. Kontaktujte prosím office@visualsearch.at a získajte svoj API kľúč. Systémový kľúč je nepovinná premenná, ktorá sa používa na prístup k webovému obchodu. Čas výpočtu podobných produktov sa líši podľa veľkosti katalógu. V prípade 1 000 produktov by to malo trvať približne 5 minút.
 
