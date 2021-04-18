@@ -65,7 +65,7 @@ If you choose this alternative, then you do not need to wait for the results. Ou
 
 To use the computed related products, the webshop needs to create an endpoint, which can accept them. Using this endpoint, we update the related products. In case it is needed, we will use the previously provided System key.
 
-An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f with 10 related products using this endpoint is presented here:
+It should be possible for our API to send update requests to your webshop. An example of updating product with ID = 8e56cc01ee064d7dbaf7a4356895da9f with 10 related products using this endpoint is presented here:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
@@ -135,7 +135,7 @@ Wenn Sie sich für diese Alternative entscheiden, dann müssen Sie nicht auf die
 
 Um die berechneten verwandten Produkte zu verwenden, muss der Webshop einen Endpoint erstellen, der diese akzeptieren kann. Über diesen Endpoint aktualisieren wir die verwandten Produkte. Falls er benötigt wird, verwenden wir den zuvor angegebenen Systemschlüssel.
 
-Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 8e56cc01ee064d7dbaf7a4356895da9f mit 10 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
+Es sollte möglich sein, dass unsere API Aktualisierungsanfragen an Ihren Webshop senden kann. Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 8e56cc01ee064d7dbaf7a4356895da9f mit 10 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
@@ -205,7 +205,7 @@ Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše API au
 
 Ak chcete používať vypočítané podobné produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme podobné produkty. V prípade potreby použijeme predtým zadaný systémový kľúč.
 
-Tu je uvedený príklad aktualizácie produktu s ID = 8e56cc01ee064d7dbaf7a4356895da9f s 10 podobnými produktmi pomocou tohto koncového bodu:
+Naše  API by malo byť schopné odosielať požiadavky na aktualizáciu do vášho webového obchodu. Tu je uvedený príklad aktualizácie produktu s ID = 8e56cc01ee064d7dbaf7a4356895da9f s 10 podobnými produktmi pomocou tohto koncového bodu:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
