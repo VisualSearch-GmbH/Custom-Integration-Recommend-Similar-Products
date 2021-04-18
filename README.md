@@ -199,7 +199,7 @@ Ak chcete používať najnovšie vypočítané podobné produkty, môžete si v�
 }
 ```
 
-#### Alternatíva 2. Aktualizácia pomocou webového obchodu API
+#### Alternatíva 2. Aktualizácia pomocou API webového obchodu
 
 Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše API automaticky nahrá výsledky do vášho internetového obchodu. 
 
