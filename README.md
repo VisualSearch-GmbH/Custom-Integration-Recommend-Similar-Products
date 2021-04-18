@@ -201,7 +201,7 @@ Ak chcete používať najnovšie vypočítané súvisiace produkty, môžete si 
 
 #### Alternatíva 2. Aktualizácia pomocou webového obchodu API
 
-Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše rozhranie API automaticky nahrá výsledky do vášho internetového obchodu. 
+Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše API automaticky nahrá výsledky do vášho internetového obchodu. 
 
 Ak chcete používať vypočítané súvisiace produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme súvisiace produkty. V prípade potreby použijeme predtým zadaný systémový kľúč.
 
