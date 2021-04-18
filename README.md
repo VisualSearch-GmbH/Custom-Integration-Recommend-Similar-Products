@@ -205,7 +205,7 @@ Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše API au
 
 Ak chcete používať vypočítané podobné produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme podobné produkty. V prípade potreby použijeme predtým zadaný systémový kľúč.
 
-Naše  API by malo byť schopné odosielať požiadavky na aktualizáciu do vášho webového obchodu. Tu je uvedený príklad aktualizácie produktu s ID = 8e56cc01ee064d7dbaf7a4356895da9f s 10 podobnými produktmi pomocou tohto koncového bodu:
+Naše  API by malo byť schopné odosielať požiadavky na aktualizáciu do vášho webového obchodu. Tu je uvedený príklad aktualizácie produktu s ID = 8e56cc01ee064d7dbaf7a4356895da9f s 10 podobnými produktami pomocou tohto koncového bodu:
 
 ```bash
 curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
