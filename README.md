@@ -203,7 +203,7 @@ Ak chcete používať najnovšie vypočítané podobné produkty, môžete si v�
 
 Ak si vyberiete túto alternatívu, nemusíte čakať na výsledky. Naše API automaticky nahrá výsledky do vášho internetového obchodu. 
 
-Ak chcete používať vypočítané podobné produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme súvisiace produkty. V prípade potreby použijeme predtým zadaný systémový kľúč.
+Ak chcete používať vypočítané podobné produkty, webový obchod musí vytvoriť endpoint, ktorý ich dokáže prijať. Pomocou tohto endpointu aktualizujeme podobné produkty. V prípade potreby použijeme predtým zadaný systémový kľúč.
 
 Tu je uvedený príklad aktualizácie produktu s ID = 8e56cc01ee064d7dbaf7a4356895da9f s 10 podobnými produktmi pomocou tohto koncového bodu:
 
