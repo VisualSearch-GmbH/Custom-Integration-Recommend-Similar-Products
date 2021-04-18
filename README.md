@@ -190,7 +190,7 @@ Ak žiadosť nebude správne prijatá, mala by sa zobraziť správa s kódom 500
 
 Po odoslaní žiadosti o výpočet podobných produktov počkajte podľa veľkosti vášho katalógu. Pre 1 000 produktov približne 5 minút, pre 10 000 produktov približne 1 hodinu atď. 
 
-Ak chcete používať najnovšie vypočítané súvisiace produkty, môžete si výsledky stiahnuť z poskytnutého url odkazu, napr. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Tu je príklad obsahu súboru s výsledkami Json, kde výrobok s ID = 11dc680240b04f469ccba354cbf0b967 má tieto 2 súvisiace výrobky:
+Ak chcete používať najnovšie vypočítané podobné produkty, môžete si výsledky stiahnuť z poskytnutého url odkazu, napr. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Tu je príklad obsahu súboru s výsledkami Json, kde výrobok s ID = 11dc680240b04f469ccba354cbf0b967 má tieto 2 súvisiace výrobky:
 
 ```bash
 {
