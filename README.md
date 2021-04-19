@@ -1,6 +1,3 @@
-# Custom Integration - Recommend Similar Products
-Instructions for custom shop systems on how to use our similar product recommendations API
-
 ## Languages
 
 [English](README.md#English)
@@ -10,6 +7,9 @@ Instructions for custom shop systems on how to use our similar product recommend
 [Slovensky](README.md#Slovensky)
 
 ## English
+
+# Custom Integration - Recommend Similar Products
+Instructions for custom shop systems on how to use our similar product recommendations API
 
 ### 1. Compute related products using webshop's catalogue
 
@@ -81,6 +81,9 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 
 ## Deutsch
 
+# Benutzerdefinierte Integration - Ähnliche Produkte empfehlen
+Anleitung für kundenspezifische Shopsysteme zur Verwendung unserer API für ähnliche Produktempfehlungen
+
 ### 1. Ähnliche Produkte aus dem Katalog des Webshops berechnen
 
 Um ähnliche Produkte mit unserer API zu berechnen, müssen Sie die folgende Anfrage senden:
@@ -150,6 +153,9 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 ```
 
 ## Slovensky
+
+# Individuálna integrácia - odporúčanie podobných produktov
+Pokyny pre custom e-shopy, ako používať naše odporúčania podobných produktov API
 
 ### 1. Výpočet podobných produktov pomocou katalógu webového obchodu
 
