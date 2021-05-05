@@ -11,7 +11,7 @@
 # Custom Integration - Recommend Similar Products
 Instructions for custom shop systems on how to use our similar product recommendations API
 
-### 1. Compute related products using webshop's catalogue
+### 1. Submit product data from the catalog
 
 To compute related products using our API you need to send the following request:
 
@@ -44,20 +44,24 @@ If the request is accepted, then you should receive this message:
 ```
 If the request is not accepted, then you should receive a message with code 500.
 
-### 2. Update related products in the webshop
+### 2. Retrieve calculated product recommendations
 
-#### Alternative #1 Update using Json file
+#### Alternative #1 Retrieve product recommendations with command
 
-After you send the computation request, please wait according to the size of your catalogue. For 1.000 products about 5 min, for 10.000 products about 1 hour, etc. 
-
-To use the latest computed related products, you can download the results from a provided url link e.g. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Here is an example of the content of a Json result file, where product with ID = 11dc680240b04f469ccba354cbf0b967 has these 2 related products:
+You can query the results with this command
 
 ```bash
 {
-  "products": 
-    {"11dc680240b04f469ccba354cbf0b967": ["05dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
+curl --location --request POST 'https://api.visualsearch.wien/similar_results' --header 'Vis-API-KEY: API_TEST_KEY'
 }
 ```
+
+The results have this format
+```bash
+{ "products": {"00025beea86041d5891b989e59d7f8b8": ["8ba5f4bc5ddd4a75bfe55238e9308385","0dda22aa515843e282691970711a9a16","ca97b9a85c3b4d1a99ef9258b255f555"],... }}
+```
+
+It means that the product "00025beea86041d5891b989e59d7f8b8" has, for example, three similar products. Their IDs can be found in the array.
 
 #### Alternative #2 Update using webshop API
 
@@ -119,7 +123,7 @@ Wenn die Anfrage nicht akzeptiert wird, sollten Sie eine Meldung mit Code 500 er
 
 ### 2. Abrufen von berechneten Produktempfehlungen
 
-#### Alternative #1 Update mit Hilfe einer Json-Datei
+#### Alternative #1 Produktempfehlungen mit Befehl abrufen
 
 Sie können die Ergebnisse mit diesem Befehl abfragen
 
