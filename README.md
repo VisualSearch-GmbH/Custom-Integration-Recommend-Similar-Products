@@ -84,7 +84,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 # Benutzerdefinierte Integration - Ähnliche Produkte empfehlen
 Anleitung für kundenspezifische Shopsysteme zur Verwendung unserer API für ähnliche Produktempfehlungen
 
-### 1. Ähnliche Produkte aus dem Katalog des Webshops berechnen
+### 1. Produktdaten aus dem Katalog übermitteln
 
 Um ähnliche Produkte mit unserer API zu berechnen, müssen Sie die folgende Anfrage senden:
 
@@ -117,20 +117,24 @@ Wenn die Anfrage akzeptiert wird, sollten Sie diese Meldung erhalten:
 ```
 Wenn die Anfrage nicht akzeptiert wird, sollten Sie eine Meldung mit Code 500 erhalten.
 
-### 2. Ähnliche Produkte im Webshop aktualisieren
+### 2. Abrufen von berechneten Produktempfehlungen
 
 #### Alternative #1 Update mit Hilfe einer Json-Datei
 
-Nachdem Sie die Berechnungsanfrage gesendet haben, warten Sie bitte entsprechend der Größe Ihres Katalogs. Für 1.000 Produkte ca. 5 min, für 10.000 Produkte ca. 1 Stunde, usw. 
-
-Um die neuesten berechneten verwandten Produkte zu verwenden, können Sie die Ergebnisse von einem bereitgestellten URL-Link herunterladen, z. B. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Hier ist ein Beispiel des Inhalts einer Json-Ergebnisdatei, in der das Produkt mit der ID = 11dc680240b04f469ccba354cbf0b967 diese 2 ähnlichen Produkte hat:
+Sie können die Ergebnisse mit diesem Befehl abfragen
 
 ```bash
 {
-  "products": 
-    {"11dc680240b04f469ccba354cbf0b967": ["05dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
+curl --location --request POST 'https://api.visualsearch.wien/similar_results' --header 'Vis-API-KEY: API_TEST_KEY'
 }
 ```
+
+Die Ergebnisse haben dieses Format
+```bash
+{ "products": {"00025beea86041d5891b989e59d7f8b8": ["8ba5f4bc5ddd4a75bfe55238e9308385","0dda22aa515843e282691970711a9a16","ca97b9a85c3b4d1a99ef9258b255f555"],... }}
+```
+
+Das bedeutet, dass das Produkt "00025beea86041d5891b989e59d7f8b8" z.B. drei ähnliche Produkte hat. Ihre IDs sind in dem Array zu finden.
 
 #### Alternative #2 Update über Webshop-API
 
@@ -157,7 +161,7 @@ curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_sellin
 # Individuálna integrácia - odporúčanie podobných produktov
 Pokyny pre custom e-shopy, ako používať naše odporúčania podobných produktov API
 
-### 1. Výpočet podobných produktov pomocou katalógu webového obchodu
+### 1. Zasielanie údajov o produktoch
 
 Ak chcete vypočítať podobné produkty pomocou nášho API rozhrania, musíte odoslať nasledujúcu požiadavku:
 
@@ -190,20 +194,24 @@ Ak žiadosť bude správne prijatá, mala by sa zobraziť táto správa:
 ```
 Ak žiadosť nebude správne prijatá, mala by sa zobraziť správa s kódom 500.
 
-### 2. Aktualizácia podobných produktov v internetovom obchode
+### 2. Získanie vypočítaných odporúčaní produktov
 
-#### Alternatíva 1. Aktualizácia pomocou súboru Json
+#### Alternatíva 1. Aktualizácia pomocou príkazu
 
-Po odoslaní žiadosti o výpočet podobných produktov počkajte podľa veľkosti vášho katalógu. Pre 1 000 produktov približne 5 minút, pre 10 000 produktov približne 1 hodinu atď. 
-
-Ak chcete používať najnovšie vypočítané podobné produkty, môžete si výsledky stiahnuť z poskytnutého URL odkazu, napr. https://api.visualsearch.wien/similar_compute/API_TEST_KEY.json. Tu je príklad obsahu súboru s výsledkami Json, kde výrobok s ID = 11dc680240b04f469ccba354cbf0b967 má tieto 2 podobné produkty:
+Výsledky môžete vyhľadať pomocou tohto príkazu
 
 ```bash
 {
-  "products": 
-    {"11dc680240b04f469ccba354cbf0b967": ["05dc680240b04f469ccba354cbf0b967", "2a88d9b59d474c7e869d8071649be43c"]}
+curl --location --request POST 'https://api.visualsearch.wien/similar_results' --header 'Vis-API-KEY: API_TEST_KEY'
 }
 ```
+
+Výsledky majú tento formát
+```bash
+{ "products": {"00025beea86041d5891b989e59d7f8b8": ["8ba5f4bc5ddd4a75bfe55238e9308385","0dda22aa515843e282691970711a9a16","ca97b9a85c3b4d1a99ef9258b255f555"],... }}
+```
+
+To znamená, že produkt "00025beea86041d5891b989e59d7f8b8" má napríklad tri podobné produkty. Ich ID nájdete v poli.
 
 #### Alternatíva 2. Aktualizácia pomocou API webového obchodu
 
