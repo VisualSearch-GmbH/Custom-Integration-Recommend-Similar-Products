@@ -63,7 +63,7 @@ Das bedeutet, dass das Produkt "00025beea86041d5891b989e59d7f8b8" z.B. drei ähn
 
 Wenn Sie sich für diese Alternative entscheiden, dann müssen Sie nicht auf die Ergebnisse warten. Unsere API wird die Ergebnisse automatisch in Ihren Webshop hochladen. 
 
-Falls Sie Shopware verwenden und nur bestimmte Produkte oder Kategorien aktualisieren möchten, können Sie trotzdem unser Plugin verwenden.Sie müssen die automatischen Updates deaktivieren und Ihre Produkte auf unseren Server hochladen, wie im vorherigen Schritt beschrieben wurde.
+Falls Sie Shopware verwenden und nur bestimmte Produkte oder Kategorien aktualisieren möchten, können Sie trotzdem unser Plugin verwenden. Sie müssen die automatischen Updates deaktivieren und Ihre Produkte manuell auf unseren Server hochladen, wie im vorherigen Schritt beschrieben wurde.
 
 Wenn Sie die Aktualisierung manuell auslösen, lädt der Server die berechneten Empfehlungen über diesen Endpunkt zurück in Ihren Webshop. Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 7dec5b61d24f4b1bbfd061fe5d2265cc mit 5 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
 
