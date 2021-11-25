@@ -65,7 +65,7 @@ Wenn Sie sich für diese Alternative entscheiden, dann müssen Sie nicht auf die
 
 Falls Sie Shopware verwenden und nur bestimmte Produkte oder Kategorien aktualisieren möchten, können Sie trotzdem unser Plugin verwenden. Sie müssen die automatischen Updates deaktivieren und Ihre Produkte manuell auf unseren Server hochladen, wie im vorherigen Kapitel beschrieben wurde.
 
-Wenn Sie die Aktualisierung manuell auslösen, schickt der Server die berechneten Empfehlungen über diesen Endpunkt zurück in Ihren Webshop. Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 7dec5b61d24f4b1bbfd061fe5d2265cc mit 5 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
+Wenn Sie die Aktualisierung manuell auslösen, schickt unser Server die berechneten Empfehlungen über diesen Endpunkt zurück in Ihren Webshop. Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 7dec5b61d24f4b1bbfd061fe5d2265cc mit 5 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
 
 ```bash
 curl --location --request POST 'https://shopware.visualsearch.at/api/v3/vis/sim/update_cross' \
