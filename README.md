@@ -20,13 +20,13 @@ curl --location --request POST 'https://api.visualsearch.wien/similar_compute' \
 --header 'Content-Type: application/json' \
 --data-raw '{"products": 
   [
-    ["002ee82ce2754dd786c56a68bde02eb0", "Aerodynamic Plastic Proflex", ["135f57af59ec49cf953db9e9f1dbfeeb", "4f8938e279a4485fac26dc973151594b", "803a938a305f464dae2778e9d43abcc3"], "http://visrecommendsimilarproducts-ajwwh.testenv.shopware.in/shop/public/media/a3/3e/75/1617786384/b6a7105d66d8ef6bf38a7bccfdf57746.jpg"],
-    ["0fc5589aa7d9430fa431d96193b4b8d1", "Small Concrete Virtual Horseshoes", ["135f57af59ec49cf953db9e9f1dbfeeb", "4f8938e279a4485fac26dc973151594b", "803a938a305f464dae2778e9d43abcc3"], "http://visrecommendsimilarproducts-ajwwh.testenv.shopware.in/shop/public/media/78/72/89/1617786383/63b0317865f07190263723a09ce64ed9.jpg"],
-    ["264ef0475b20404b96487795987b5473", "Lightweight Wool G2-Tambi\u00e9n", ["135f57af59ec49cf953db9e9f1dbfeeb", "4f8938e279a4485fac26dc973151594b", "803a938a305f464dae2778e9d43abcc3"], "http://visrecommendsimilarproducts-ajwwh.testenv.shopware.in/shop/public/media/2e/67/ba/1617786381/3e412a097a9db2766d811dd33c080267.jpg"]
+    ["002ee82ce2754dd786c56a68bde02eb0", "Aerodynamic Plastic Proflex", ["135f57af59ec49cf953db9e9f1dbfeeb", "4f8938e279a4485fac26dc973151594b", "803a938a305f464dae2778e9d43abcc3"], ["Schuhe", "Handtaschen", "Neu"], "http://visrecommendsimilarproducts-ajwwh.testenv.shopware.in/shop/public/media/a3/3e/75/1617786384/b6a7105d66d8ef6bf38a7bccfdf57746.jpg"],
+    ["0fc5589aa7d9430fa431d96193b4b8d1", "Small Concrete Virtual Horseshoes", ["135f57af59ec49cf953db9e9f1dbfeeb", "4f8938e279a4485fac26dc973151594b", "803a938a305f464dae2778e9d43abcc3"], ["Schuhe", "Handtaschen", "Neu"], "http://visrecommendsimilarproducts-ajwwh.testenv.shopware.in/shop/public/media/78/72/89/1617786383/63b0317865f07190263723a09ce64ed9.jpg"],
+    ["264ef0475b20404b96487795987b5473", "Lightweight Wool G2-Tambi\u00e9n", ["135f57af59ec49cf953db9e9f1dbfeeb", "4f8938e279a4485fac26dc973151594b", "803a938a305f464dae2778e9d43abcc3"], ["Schuhe", "Handtaschen", "Neu"], "http://visrecommendsimilarproducts-ajwwh.testenv.shopware.in/shop/public/media/2e/67/ba/1617786381/3e412a097a9db2766d811dd33c080267.jpg"]
   ]
 }'
 ```
-Wie Sie hier sehen können, benötigen wir Produkt-IDs, Namen, Kategorien und Bild-URLs.
+Sie haben die Möglichkeit, die Produkte oder Kategorien auszuwählen, für die Sie Empfehlungen berechnen möchten. Wie Sie hier sehen können, benötigen wir Produkt-IDs, Namen, Kategorien-IDs, Kategorien-Namen und Bild-URLs. Es ist auch möglich, die Anzahl der berechneten Empfehlungen mit einem zusätzlichen Parameter anzugeben.
 
 Um diese Anfrage zu senden, benötigen Sie einen gültigen API-Schlüssel. Kontaktieren Sie bitte office@visualsearch.at, um Ihren API-Schlüssel zu erhalten. Der Systemschlüssel ist eine optionale Variable, die für den Zugriff auf den Webshop verwendet wird. Die Berechnungszeit ähnlicher Produkte variiert je nach Größe des Katalogs. Für 1.000 Produkte sollte es etwa 5 Minuten dauern. Für Kunden mit großem Katalog können wir die Berechnung von 1.000 Produkten auf wenige Sekunden beschleunigen.
 
@@ -63,19 +63,18 @@ Das bedeutet, dass das Produkt "00025beea86041d5891b989e59d7f8b8" z.B. drei ähn
 
 Wenn Sie sich für diese Alternative entscheiden, dann müssen Sie nicht auf die Ergebnisse warten. Unsere API wird die Ergebnisse automatisch in Ihren Webshop hochladen. 
 
-Um die berechneten verwandten Produkte zu verwenden, muss der Webshop einen Endpoint erstellen, der diese akzeptieren kann. Über diesen Endpoint aktualisieren wir die verwandten Produkte. Falls er benötigt wird, verwenden wir den zuvor angegebenen Systemschlüssel.
+Falls Sie Shopware verwenden und nur bestimmte Produkte oder Kategorien aktualisieren möchten, können Sie trotzdem unser Plugin verwenden.Sie müssen die automatischen Updates deaktivieren und Ihre Produkte auf unseren Server hochladen, wie im vorherigen Schritt beschrieben wurde.
 
-Es sollte möglich sein, dass unsere API Aktualisierungsanfragen an Ihren Webshop senden kann. Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 8e56cc01ee064d7dbaf7a4356895da9f mit 10 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
+Wenn Sie die Aktualisierung manuell auslösen, lädt der Server die berechneten Empfehlungen über diesen Endpunkt zurück in Ihren Webshop. Ein Beispiel für die Aktualisierung eines Produkts mit der ID = 7dec5b61d24f4b1bbfd061fe5d2265cc mit 5 zugehörigen Produkten unter Verwendung dieses Endpoints wird hier dargestellt:
 
 ```bash
-curl --location --request POST 'https://YOUR_WEBSHOP.com/api/update_cross_selling' \
---header 'Vis-SYSTEM-KEY: SYSTEM_KEY' \
+curl --location --request POST 'https://shopware.visualsearch.at/api/v3/vis/sim/update_cross' \
+--header 'Authorization: Bearer XYZ123' \
 --header 'Content-Type: application/json' \
---data-raw '{
-  "products": 
-  {
-    "8e56cc01ee064d7dbaf7a4356895da9f": ["91004537ddb74ac89ef6b1f8853887c9", "8dcc68a7e9f44e6fa4429ce412adc80d", "f48fdd472c5d4b8d992da9a16faea29d",        "2171fe56f5614493838f7716795eb628", "0fce9c7e0c9549778cdf79cd5fd9cf5e", "354992a049af4e69a1b4a8ed27786a63", "427650c5390b4201af6ae8319a26f3fc", "56a332dafd254f8ba39d5fecc2661963", "232135a954f54852b0b9d3ebd97b8bc5", "3347bb11f3a44838bfcc7b4e80cc5474"]
-    }
+--data-raw '{"products":
+{
+  "7dec5b61d24f4b1bbfd061fe5d2265cc":["a32fd2f7fa6c4ed4971630e443855f99", "91f639a5a9cd4cd699eb7d926703b98b", "e817bd859d2a4401ab69499abc86d801", "8ba5f4bc5ddd4a75bfe55238e9308385", "9988e0f6e23f47e1aafaab2c9317dd78"]
+}
 }'
 ```
 
